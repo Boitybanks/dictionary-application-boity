@@ -6,9 +6,33 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="shecodeslogo" alt="logo" />
-        <p> Welcome to my dictionary app! By Boity </p>
+        <div className="container">
+          <img src={logo} className="shecodeslogo" alt="logo" />
+          <p> Welcome to my dictionary app! By Boity </p>
+        </div>
       </header>
+      <footer className="App-footer">
+        <div className="text-center">
+          <small>
+            This project was coded by Boity and is{" "}
+            <a
+              href="https://github.com/Boitybanks/dictionary-application-boity"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open-sourced on GitHub
+            </a>{" "}
+            and hosted on{" "}
+            <a
+              href="https://dictionaryapplicationboity.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Netlify.
+            </a>
+          </small>
+        </div>
+      </footer>
     </div>
   );
 }
