@@ -8,7 +8,7 @@ export default function App() {
       <header className="App-header">
         <div className="container">
           <img src={logo} className="shecodeslogo" alt="logo" />
-          <p> Welcome to my dictionary app! By Boity </p>
+          <p> Welcome to my dictionary app! by Boity </p>
         </div>
       </header>
       <footer className="App-footer">
