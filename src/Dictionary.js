@@ -10,6 +10,7 @@ export default function Dictionary(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    alert(`Searching for: ${keyword}`);
     // Perform search with the keyword
   }
 
