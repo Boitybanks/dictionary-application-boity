@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./SheCodes.png";
+import Dictionary from "./Dictionary";
 import "./App.css";
 
 export default function App() {
@@ -11,6 +12,9 @@ export default function App() {
           <p> Welcome to my dictionary app! by Boity </p>
         </div>
       </header>
+      <main>
+        <Dictionary defaultKeyword="sunset" />
+      </main>
       <footer className="App-footer">
         <div className="text-center">
           <small>
