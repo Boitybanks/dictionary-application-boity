@@ -2,9 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shecodeslogo {
+  display: block;
+  margin-bottom: 600px;
+  width: 200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
