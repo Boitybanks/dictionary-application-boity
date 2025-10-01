@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <img src={logo} className="App-logo img-fluid" alt="logo" />
+          <img src={logo} className="shecodeslogo img-fluid" alt="logo" />
         </header>
         <main>
           <Dictionary />
@@ -20,7 +20,14 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
+              GitHub and hosted on{" "}
+              <a
+                href="https://dictionaryapplicationboity.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Netlify
+              </a>
             </a>
           </small>
         </footer>
