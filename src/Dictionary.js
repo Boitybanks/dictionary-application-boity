@@ -13,8 +13,7 @@ export default function Dictionary(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching for: ${keyword}`);
-    // Perform search with the keyword
+    // alert(`Searching for: ${keyword}`); // Optional: remove for production
     const apiKey = "0fcte29ba005o3984f3f24530ff18441";
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
@@ -23,18 +22,12 @@ export default function Dictionary(props) {
   return (
     <div>
       <div className="Dictionary">
-        {/* ...existing code... */}
-        <form input-type="search" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={props.keyword}
-            onChange={handleInputChange}
-          />
+        <form onSubmit={handleSubmit}>
+          <input type="search" value={keyword} onChange={handleInputChange} />
           <button type="submit">Search</button>
         </form>
         <div className="Dictionary-section">
-          <h2>{props.keyword}</h2>
-          {/* ...existing code... */}
+          <h2>{keyword}</h2>
         </div>
       </div>
     </div>

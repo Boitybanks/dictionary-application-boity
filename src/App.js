@@ -7,11 +7,12 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
+          <h1>Dictionary</h1>
           <img src={logo} className="shecodeslogo img-fluid" alt="logo" />
+          <p>What word do you want to look up?</p>
+          <Dictionary defaultKeyword="hello" />
         </header>
-        <main>
-          <Dictionary />
-        </main>
+
         <footer className="App-footer">
           <small>
             Coded by Boitumelo Mbhele 🔥 | Open-sourced on{" "}
