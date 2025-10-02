@@ -5,6 +5,11 @@ export default function Results(props) {
     return (
       <div className="Results">
         <h2>{props.definition.word}</h2>
+        {props.definition.phonetic && (
+          <p>
+            <strong>Phonetic:</strong> {props.definition.phonetic}
+          </p>
+        )}
         <h3>Definitions:</h3>
         {props.definition.meanings.map((meaning, index) => (
           <div key={index}>
