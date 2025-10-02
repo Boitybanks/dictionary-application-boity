@@ -24,6 +24,21 @@ export default function Results(props) {
             <hr />
           </div>
         ))}
+        {props.photos && (
+          <div className="Results-photos">
+            <h3>Images:</h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              {props.photos.map((photo, idx) => (
+                <img
+                  key={idx}
+                  src={photo.src.landscape}
+                  alt={photo.alt || props.definition.word}
+                  style={{ width: "150px", borderRadius: "8px" }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     );
   } else {

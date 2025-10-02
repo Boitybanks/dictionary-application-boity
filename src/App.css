@@ -1,40 +1,288 @@
-.App {
-  text-align: center;
+/* Dictionary.css */
+
+/* Global styles */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
 .shecodeslogo {
+  width: 160px; /* Adjust size as needed */
+  height: auto;
   display: block;
-  margin: 0 auto 20px auto;
-  width: 200px;
+  margin: 0 auto 1rem auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .shecodeslogo {
-    animation: shecodeslogo-spin infinite 20s linear;
+/* Main Dictionary Component */
+.Dictionary {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* Images section for Results */
+.Results-photos {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.Results-photos img {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Search Form */
+.Dictionary form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.Dictionary input[type="search"] {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+  outline: none;
+  font-family: inherit;
+}
+
+.Dictionary input[type="search"]:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.Dictionary input[type="search"]::placeholder {
+  color: #9ca3af;
+}
+
+.Dictionary button[type="submit"] {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  font-family: inherit;
+}
+
+.Dictionary button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.Dictionary button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.Dictionary-section {
+  margin-top: 2rem;
+}
+
+/* Results Component */
+.Results {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #f5efea;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
-  color: rgb(21, 20, 20);
-  padding-top: 40px;
+.Results h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f3f4f6;
 }
 
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.Results p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
 }
 
-.App-link {
-  color: #61dafb;
+.Results p strong {
+  color: #374151;
+  font-weight: 600;
 }
+
+.Results h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 2rem 0 1.5rem 0;
+}
+
+/* Individual meaning cards */
+.Results > div {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.Results > div:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.Results > div strong {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.Results > div p {
+  font-size: 1.1rem;
+  color: #374151;
+  margin: 1rem 0;
+}
+
+.Results > div em {
+  display: block;
+  font-style: italic;
+  color: #6b7280;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  border-left: 3px solid #e5e7eb;
+}
+
+/* Synonyms styling */
+.Results > div p:has(strong:contains("Synonyms")) {
+  margin-top: 1rem;
+}
+
+.Results > div p strong:contains("Synonyms") + * {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* HR styling */
+.Results hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  margin: 2rem 0;
+}
+
+/* No results message */
+.Results p:only-child {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 2px dashed #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Dictionary {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .Dictionary form {
+    flex-direction: column;
+  }
+
+  .Results h2 {
+    font-size: 2rem;
+  }
+
+  .Dictionary input[type="search"],
+  .Dictionary button[type="submit"] {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Dictionary {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .Results h2 {
+    font-size: 1.75rem;
+  }
+
+  .Results > div {
+    padding: 1rem;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.Dictionary input[type="search"]:focus-visible,
+.Dictionary button[type="submit"]:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+.Dictionary input[type="search"],
+.Dictionary button[type="submit"],
+.Results > div {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+a {
+  color: #6dd3d1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+  color: #764ba2;
+  text-decoration: underline;
+}
+/* End of Dictionary.css */
