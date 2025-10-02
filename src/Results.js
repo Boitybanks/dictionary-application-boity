@@ -11,6 +11,11 @@ export default function Results(props) {
             <strong>{meaning.partOfSpeech}</strong>
             <p>{meaning.definition || "No definition found."}</p>
             <em>{meaning.example || "No example available."}</em>
+            {meaning.synonyms && meaning.synonyms.length > 0 && (
+              <p>
+                <strong>Synonyms:</strong> {meaning.synonyms.join(", ")}
+              </p>
+            )}
             <hr />
           </div>
         ))}
