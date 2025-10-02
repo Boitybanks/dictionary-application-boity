@@ -17,7 +17,7 @@ export default function App() {
 
         <footer className="App-footer">
           <small className="text-center d-block mb-3">
-            Coded by Boitumelo Mbhele 🔥 | Open-sourced on{" "}
+            Coded by <strong>Boitumelo Mbhele</strong> 🔥 | Open-sourced on{" "}
             <a
               href="https://github.com/Boitybanks/dictionary-application-boity"
               target="_blank"
