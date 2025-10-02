@@ -9,10 +9,10 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1 className="App-title text-center mt-5">Dictionary</h1>
+          <h1 className="App-title text-center mt-5">Dictionary Application</h1>
           <img src={logo} className="shecodeslogo img-fluid" alt="logo" />
           <p className="text-center">What word do you want to look up?</p>
-          <Dictionary defaultKeyword="hello" />
+          <Dictionary defaultKeyword="Sunset" />
         </header>
 
         <footer className="App-footer">
